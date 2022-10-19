@@ -45,4 +45,22 @@ describe('Email Validation Tests', () => {
 
         expect(resultData).toBe(false)
     })
+
+    it("checking email domain array match", () => {
+        let testEmail6 = "ashutoshthakur1409@gmail.com";
+        let testDomain = ["yahoo.com","gmail.com"];
+
+        let resultData = validInfo.validateEmail(testEmail6,testDomain);
+
+        expect(resultData).toBe(true)
+    })
+
+    it("checking email domain array not match", () => {
+        let testEmail7 = "ashutoshthakur1409@hotmail.com";
+        let testDomain = ["yahoo.com","gmail.com"];
+
+        let resultData = validInfo.validateEmail(testEmail7,testDomain);
+
+        expect(resultData).toBe(false)
+    })
  })

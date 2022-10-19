@@ -1,15 +1,23 @@
 function validateEmail(email,domain = " ") {
 
+    // checking if email is null or undefined
     if(email === null || email === undefined) {
         return false;
     }
+
+    // domain checker
     if(domain != " ") {
         let emailSplit = email.split("@")
         let emailDomain = emailSplit[1];
+        if(Array.isArray(domain)) {
 
-        if(emailDomain !== domain)
-        {
-            return false;
+            return domain.includes(emailDomain);
+        }
+        else {
+            if(emailDomain !== domain)
+            {
+                return false;
+            }
         }
     }
     // RFC 5322 Format regex
