@@ -1,7 +1,7 @@
 import checkPasswordStrength from "./utils/checkPasswordStrength"
 import validateEmail from "./utils/validateEmail"
 
-let version = "0.0.2"
+let version = "1.0.0"
 
 const validInfo = {
     checkPasswordStrength,

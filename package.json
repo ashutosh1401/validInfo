@@ -20,5 +20,16 @@
     "jest": "^29.2.0",
     "supertest": "^6.3.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashutosh1401/validInfo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashutosh1401/validInfo/issues"
+  },
+  "homepage": "https://github.com/ashutosh1401/validInfo#readme"
 }
