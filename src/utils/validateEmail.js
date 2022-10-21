@@ -1,9 +1,8 @@
+import checkInputString from "../helper/checkInputString";
+
 function validateEmail(email,domain = " ") {
 
-    // checking if email is null or undefined
-    if(email === null || email === undefined) {
-        return false;
-    }
+    checkInputString(email)
 
     // domain checker
     if(domain != " ") {

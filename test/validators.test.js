@@ -23,9 +23,9 @@ describe('Email Validation Tests', () => {
     it("checking null case", () => {
         let testEmail4 = null;
 
-        let resultData = validInfo.validateEmail(testEmail4);
+        // let resultData = validInfo.validateEmail(testEmail4);
 
-        expect(resultData).toBe(false);
+        expect(() => validInfo.validateEmail(testEmail4)).toThrow('Input must be string but recieved null');
     })
 
     it("checking email domain", () => {
@@ -62,5 +62,17 @@ describe('Email Validation Tests', () => {
         let resultData = validInfo.validateEmail(testEmail7,testDomain);
 
         expect(resultData).toBe(false)
+    })
+
+    it("checking if input email is undefined", () => {
+        let testEmail8 = undefined;
+
+        expect(() => validInfo.validateEmail(testEmail8)).toThrow(`Input must be string but recieved undefined`)
+    })
+
+    it("checking if input email is undefined", () => {
+        let testEmail8 = {};
+
+        expect(() => validInfo.validateEmail(testEmail8)).toThrow(`Input must be string but recieved Object`)
     })
  })
