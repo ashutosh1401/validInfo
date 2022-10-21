@@ -2,12 +2,14 @@ import checkInputString from "../helper/checkInputString";
 
 function validateEmail(email,domain = " ") {
 
+    //  check input string
     checkInputString(email)
 
     // domain checker
     if(domain != " ") {
         let emailSplit = email.split("@")
         let emailDomain = emailSplit[1];
+        //  checking domain is array
         if(Array.isArray(domain)) {
 
             return domain.includes(emailDomain);
